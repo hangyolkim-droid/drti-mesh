@@ -31,6 +31,10 @@ that single transmission. A sweep is `N` broadcast slots, not `N(N-1)` exchanges
 One consequence worth stating explicitly: a sweep yields `N(N-1)` link measurements for
 `N(N-1)/2` unique links, so **every link is measured twice — once per direction.**
 
+ESP-based RTI on sparse topologies, with a custom round-robin protocol, has already been
+demonstrated (see References). The broadcast design below is the same instinct, reached
+independently.
+
 ## 2. Failure mode: broadcast frames are not ACKed
 
 Unacknowledged broadcast means link dropouts. Do not solve this with retries — solve it with
@@ -122,5 +126,9 @@ existing `drti` code already lives.
 - Espressif ESP-IDF — `esp_wifi_80211_tx` (raw frame TX), promiscuous mode.
 - ESP32-C5 datasheet — 2.4 + 5 GHz dual-band Wi-Fi 6.
 - Wilson & Patwari, *Radio Tomographic Imaging with Wireless Networks* (2010) — forward model.
+- *Democratized Radio Tomography: Using Consumer Equipment to See through Walls* (IEEE, 2019) —
+  prior art for commodity-equipment RTI.
+- Weerasiri, *Indoor Radio Tomographic Imaging with Sparse Device Topologies* (thesis, University
+  of Colombo School of Computing) — CSI-based RTI on ESP-class nodes, round-robin protocol.
 - Kotaru et al., *SpotFi* (SIGCOMM 2015) — CSI phase sanitisation.
 - Maróti et al., *FTSP* (2004) — flooding time synchronisation.

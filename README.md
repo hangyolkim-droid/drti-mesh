@@ -79,10 +79,23 @@ The route from this simulation baseline to a physical node mesh — broadcast pr
 recovery, phase, TDMA sync, and interference — is written up in
 [docs/production-path.md](docs/production-path.md).
 
+## Prior art & what's new here
+
+RTI with a Fresnel-zone forward model is Wilson & Patwari (2010), and commodity-equipment RTI has
+been demonstrated before (see References). The contribution here is narrower: the *unrooted-phone*
+constraint. The OS sandbox forces sequential pairwise unicast, which puts an `O(N^2)` airtime floor
+under the sweep and makes scan rate — not resolution — the binding limit.
+
 ## References & prior art
 
 - Wilson & Patwari, “Radio Tomographic Imaging with Wireless Networks” (IEEE Trans. Mobile
   Computing, 2010) — Fresnel-zone link sensitivity.
+- *Democratized Radio Tomography: Using Consumer Equipment to See through Walls* (IEEE, 2019) —
+  prior art for commodity-equipment RTI.
+- *Through-the-Wall Imaging Exploiting 2.4 GHz Commodity Wi-Fi* (arXiv:1903.03895, 2019) —
+  three-dimensional through-wall imaging on commodity hardware.
+- Weerasiri, *Indoor Radio Tomographic Imaging with Sparse Device Topologies* (thesis, University
+  of Colombo School of Computing) — CSI-based RTI on ESP-class nodes with a round-robin protocol.
 - Karanam et al., “3D Through-Wall Imaging with Unmanned Aerial Vehicles Using WiFi”
   (IPSN 2017) — 3D RF tomography from mobile transceivers.
 - Christensen et al., “BatVision: Learning to See 3D Spatial Layout with Two Ears”

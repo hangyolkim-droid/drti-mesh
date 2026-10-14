@@ -3,7 +3,7 @@
 A **D-RTI baseline**: Fresnel-zone RF tomography on commodity edge nodes.
 
 Reference implementation for the article
-**“Four Phones, Six Links, One Underdetermined Inverse Problem: A D-RTI Concept.”**
+**“Distributed Radio Tomographic Imaging (D-RTI) on Commodity Edge Nodes.”**
 
 > **Scope: simulation only.** No hardware has been instrumented and no RF
 > measurements have been taken. Everything here is the *mathematical* baseline —

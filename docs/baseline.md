@@ -1,7 +1,7 @@
 # D-RTI baseline
 
 Companion documentation for the article
-**“Four Phones, Six Links, One Underdetermined Inverse Problem: A D-RTI Concept.”**
+**“Distributed Radio Tomographic Imaging (D-RTI) on Commodity Edge Nodes.”**
 
 **Status: mathematical baseline. Simulation only — no hardware instrumented, no RF measurements
 taken.** Every number below comes from the synthetic forward model in `drti.simulate`.

@@ -62,6 +62,17 @@ The trade-off *is* the result: more nodes localize better and scan slower. The 6
 - **`W` is physics-idealised** — geometric Fresnel ellipsoids with a cylindrical-wave weight,
   no multipath, no wall-material loss model.
 
+## Roadmap
+
+- **v0.2 — multipath & baseline drift.** Model time-varying baseline drift, multipath variance, and
+  rolling median filtering, then show centroid recovery under a drifting baseline.
+  *(Today the repo does **not** model multipath. The Δy / rolling-baseline / median-filter
+  mitigation is an architectural proposal, not a simulated feature.)*
+- **Sparse / matrix-free solver.** Replace the dense normal-equation solve so voxel grids scale past
+  a few thousand.
+- **Multi-target + kinematic stage.** EKF hand-off from voxel probability blobs to position/velocity
+  tracks.
+
 ## References & prior art
 
 - Wilson & Patwari, “Radio Tomographic Imaging with Wireless Networks” (IEEE Trans. Mobile

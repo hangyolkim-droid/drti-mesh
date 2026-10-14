@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drti-mesh"
+version = "0.1.0"
+description = "D-RTI baseline: Fresnel-zone RF tomography on commodity edge nodes (simulation only)."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Han Kim" }]
+dependencies = ["numpy>=1.20"]
+keywords = ["rf-tomography", "rti", "fresnel", "edge-computing", "csi"]
+
+[project.scripts]
+drti = "drti.cli:main"
+
+[tool.setuptools]
+packages = ["drti"]

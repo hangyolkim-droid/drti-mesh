@@ -73,6 +73,12 @@ The trade-off *is* the result: more nodes localize better and scan slower. The 6
 - **Multi-target + kinematic stage.** EKF hand-off from voxel probability blobs to position/velocity
   tracks.
 
+## Production path
+
+The route from this simulation baseline to a physical node mesh — broadcast probing, dropped-link
+recovery, phase, TDMA sync, and interference — is written up in
+[docs/production-path.md](docs/production-path.md).
+
 ## References & prior art
 
 - Wilson & Patwari, “Radio Tomographic Imaging with Wireless Networks” (IEEE Trans. Mobile
